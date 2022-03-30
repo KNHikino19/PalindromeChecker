@@ -24,3 +24,40 @@ public boolean palindrome(String word)
   else
   return false;
 }
+class Strutil
+{
+  public static String revString(String sWord) {
+    String s = "";
+    int last = sWord.length()-1;
+    for (int i = last; i>=0; i--)
+      s = s + sWord.substring(i, i+1);
+    return s;
+  }
+  public static String onlyLetters(String sWord) {
+    String s ="";
+    int last = sWord.length()-1;
+    for (int i = 0; i<=last; i++)
+    {
+      if (Character.isLetter(sWord.charAt(i)))
+      {
+        s= s+sWord.charAt(i);
+      }
+    }
+    return s;
+  }
+public static String noSpaces(String sWord){
+  String s ="";
+    int last = sWord.length()-1;
+    for (int i = 0; i<=last; i++)
+    {
+      if (sWord.charAt(i) != ' ')
+      {
+        s= s+sWord.charAt(i);
+      }
+}
+return s;
+}
+  public static String noCapitals(String sWord) {
+    return sWord.toLowerCase();
+  }
+}

@@ -16,14 +16,11 @@ public void setup()
 }
 public boolean palindrome(String word)
 {
-  //your code here
+  String word2 = Strutil.onlyLetters(word);
+  String word3 = Strutil.noCapitals(word2);
+  String word4 = Strutil.noSpaces(word3);
+  if (word4.equals(Strutil.revString(word4)))
+    return true;
+  else
   return false;
 }
-public String reverse(String str)
-{
-    String sNew = new String();
-    //your code here
-    return sNew;
-}
-
-
